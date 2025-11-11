@@ -16,7 +16,7 @@ _Identifying animal species from images using Convolutional Neural Networks (CNN
 - <a href="#data-cleaning--preparation">Data Cleaning & Preparation</a>
 - <a href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a>
 - <a href="#research-questions--key-findings">Research Questions & Key Findings</a>
-- <a href="#dashboard">Dashboard</a>
+- <a href="#dashboard">Graphs/Plots</a>
 - <a href="#how-to-run-this-project">How to Run This Project</a>
 - <a href="#author--contact">Author & Contact</a>
 
@@ -26,7 +26,7 @@ _Identifying animal species from images using Convolutional Neural Networks (CNN
 This project classifies animals based on image inputs using a deep learning pipeline built with TensorFlow and Keras. It leverages transfer learning with pre-trained models to achieve high accuracy across multiple species, and includes visualizations for performance metrics and prediction confidence
 
 ---
-<h2><a class="anchor" id="business-problem"></a>Business Problem</h2>
+<h2><a class="anchor" id="business-problem"></a>Project Problem</h2>
 
 Accurate animal classification is essential for wildlife monitoring, conservation, and educational tools. This project aims to:
 - Automate species identification from images
@@ -59,18 +59,19 @@ animal_classification/
 ├── README.md
 ├── .gitignore
 ├── requirements.txt
-├── Image Classification of animals.pdf
+├── Classification of animals.pdf
 │
-├── notebooks/                  # Jupyter notebooks
+├── notebooks/                                # Jupyter notebooks
 │   ├── exploratory_data_analysis.ipynb
-│   ├── animal_classification_analysis.ipynb
+│   ├── animal-img-clsf.ipynb
 │
-├── scripts/                    # Python scripts for ingestion and processing
-│   ├── ingestion_db.py
-│   └── get_classification_summary.py
+├── summery/                  
+│   ├── animal_classifier_model.pkl
+│   └──classification_report.txt
 │
-├── dashboard/                  # dashboard file
-│   └── animal_classification_dashboard.py
+├── Outputs/                  # visuals file
+│   └── airborne.png
+│    └── aquatic.png
 ```
 
 ---
@@ -106,16 +107,10 @@ animal_classification/
 - Real-Time Prediction: Streamlit app delivers <1s prediction latency
 
 ---
-<h2><a class="anchor" id="dashboard"></a>Dashboard</h2>
-
-- Streamlit Dashboard shows:
-- Upload & Predict interface
-- Confidence score bar chart
-- Class-wise accuracy
-- Sample predictions with image previews
+<h2><a class="anchor" id="dashboard"></a>Graphs/Plots</h2>
 
 ![Aquatic_Animal graphs](https://github.com/SBanditaDas/Real-Time-Image-Classification-of-Animals/blob/main/aquatic.png)
-
+![Airborne_Animal graphs](https://github.com/SBanditaDas/Real-Time-Image-Classification-of-Animals/blob/main/airborne.png)
 ---
 <h2><a class="anchor" id="how-to-run-this-project"></a>How to Run This Project</h2>
 
@@ -123,23 +118,19 @@ animal_classification/
 ```bash
 git clone https://github.com/SBanditaDas/animal-classification.git
 ```
-3. Load the CSVs and ingest into database:
-```bash
-python scripts/ingestion_db.py
-```
-4. Create vendor summary table:
-```bash
-python scripts/get_classification_summary.py
-```
-5. Open and run notebooks:
-   - `notebooks/exploratory_data_analysis.ipynb`
-   - `notebooks/animal_classification_analysis.ipynb`
+2. Open and run notebooks:
+   - `animal-img-clsf.ipynb`
+     
+3. View results:
+   
+> Check - predictions.csv
+        - classification_report.txt
+  
 
 ---
 <h2><a class="anchor" id="author--contact"></a>Author & Contact</h2>
 
 **Sushree Bandita Das**  
-Machine Learning  
 
   <a href="https://twitter.com/S_Bandita_Das" target="blank">
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="S_Bandita_Das" height="30" width="40" />

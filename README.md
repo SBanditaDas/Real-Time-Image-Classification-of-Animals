@@ -114,7 +114,7 @@ animal_classification/
 - Class-wise accuracy
 - Sample predictions with image previews
 
-![Vendor Performance Dashboard](images/dashboard.png)
+![Aquatic_Animal graphs](https://github.com/SBanditaDas/Real-Time-Image-Classification-of-Animals/blob/main/aquatic.png)
 
 ---
 <h2><a class="anchor" id="how-to-run-this-project"></a>How to Run This Project</h2>
